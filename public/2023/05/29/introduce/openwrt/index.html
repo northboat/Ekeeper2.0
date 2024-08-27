@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>AX6S刷入openwrt记录 | EKeeper House</title><meta name="keywords" content="网络"><meta name="author" content="EKeepers"><meta name="copyright" content="EKeepers"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="被导师叫去当工具人了捏🥺">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AX6S刷入openwrt记录">
+<meta property="og:url" content="https://www.neuq.club/2023/05/29/introduce/openwrt/index.html">
+<meta property="og:site_name" content="EKeeper House">
+<meta property="og:description" content="被导师叫去当工具人了捏🥺">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.neuq.club/img/shadow.jpg">
+<meta property="article:published_time" content="2023-05-29T10:18:18.000Z">
+<meta property="article:modified_time" content="2024-08-27T14:17:25.396Z">
+<meta property="article:author" content="EKeepers">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.neuq.club/img/shadow.jpg"><link rel="shortcut icon" href="/img/logo.ico"><link rel="canonical" href="https://www.neuq.club/2023/05/29/introduce/openwrt/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AX6S刷入openwrt记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-27 22:17:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/logo.jpg" onerror="onerror=null;src='/img/train.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 资源链接</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/thank/"><i class="fa-fw fas fa-handshake"></i><span> 特别感谢</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/shadow.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">EKeeper House</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 资源链接</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/thank/"><i class="fa-fw fas fa-handshake"></i><span> 特别感谢</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">AX6S刷入openwrt记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-05-29T10:18:18.000Z" title="Created 2023-05-29 18:18:18">2023-05-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-08-27T14:17:25.396Z" title="Updated 2024-08-27 22:17:25">2024-08-27</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="AX6S刷入openwrt启用mentohust记录"><a href="#AX6S刷入openwrt启用mentohust记录" class="headerlink" title="AX6S刷入openwrt启用mentohust记录"></a>AX6S刷入openwrt启用mentohust记录</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>被导师叫去帮忙装<code>mentohust</code>，准备好了<code>ipk</code>文件空手就过去了，结果被告知路由器是新的，没刷过<code>openwrt</code>😭</p>
+<p>于是把路由器借了回来刷一波，好在这个型号网上教程很全，特此记录。</p>
+<h2 id="为什么要mentohust"><a href="#为什么要mentohust" class="headerlink" title="为什么要mentohust"></a>为什么要mentohust</h2><p>mentohust可以在路由器登录校园网，这样路由器就可以把网络分享出去了，通过连接wifi，直接访问互联网，并且可以访问校内内网资源。以前校园网账户有包月策略时，我们用它24小时薅校园网，现在本科生只给免费5G了，所以这种共享互联网的方式可能只适合老师或者研究生了。</p>
+<h2 id="路由器型号"><a href="#路由器型号" class="headerlink" title="路由器型号"></a>路由器型号</h2><p><code>Redmi AX6S</code></p>
+<h2 id="Step-1：-换开发版"><a href="#Step-1：-换开发版" class="headerlink" title="Step 1： 换开发版"></a>Step 1： 换开发版</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ol>
+<li><p>连接WiFi，登录网关进行初始化</p>
+</li>
+<li><p>密码设置为：<code>Passw0rd</code></p>
+</li>
+<li><p>下载内测固件：AX6S开发版固件1.2.7：<a target="_blank" rel="noopener" href="https://wwp.lanzoul.com/ib8UK0fofpdi">https://wwp.lanzoul.com/ib8UK0fofpdi</a> （密码:5v1s）</p>
+</li>
+</ol>
+<h3 id="开刷"><a href="#开刷" class="headerlink" title="开刷"></a>开刷</h3><p>重新连接设置好的ssid</p>
+<p>再次进入网关后台，在常用设置选择手动升级</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-9d2cc3-image-20230529163635126.png" alt="image-20230529163635126"></p>
+<p>选择那个miwifi开头的bin file，点击升级</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-fbdfe0-2023-05-29-161c6d-image-20230529164217182.png" alt="image-20230529164217182"></p>
+<p>等待路由器亮起蓝灯</p>
+<p>重新进入管理界面，若rom版本变为开发版，则成功。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-549c2e-2023-05-29-ed0a26-image-20230529164625023.png" alt="image-20230529164625023"></p>
+<h2 id="Step2：获取SSH密码"><a href="#Step2：获取SSH密码" class="headerlink" title="Step2：获取SSH密码"></a>Step2：获取SSH密码</h2><h3 id="准备-1"><a href="#准备-1" class="headerlink" title="准备"></a>准备</h3><p>SSH密码获取网站：<a target="_blank" rel="noopener" href="https://www.oxygen7.cn/miwifi">https://www.oxygen7.cn/miwifi</a></p>
+<p>备用：<a target="_blank" rel="noopener" href="https://miwifi.dev/ssh">https://miwifi.dev/ssh</a></p>
+<h3 id="开整"><a href="#开整" class="headerlink" title="开整"></a>开整</h3><p>进入<a target="_blank" rel="noopener" href="https://miwifi.dev/ssh">https://miwifi.dev/ssh</a></p>
+<p>输入SN，计算出SSH的密码</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-8d283a-image-20230529164805498.png" alt="image-20230529164805498"></p>
+<p>我这里算出来的是：<code>4a10224d</code></p>
+<h2 id="Step3：刷入底包"><a href="#Step3：刷入底包" class="headerlink" title="Step3：刷入底包"></a>Step3：刷入底包</h2><h3 id="准备-2"><a href="#准备-2" class="headerlink" title="准备"></a>准备</h3><p><a target="_blank" rel="noopener" href="https://wwp.lanzoul.com/iIFgB0fofhzc">ax6s-openwrt固件.zip（密码:38o0）</a></p>
+<p>解压，得到三个bin文件：</p>
+<ul>
+<li><code>factory.bin</code>为底包</li>
+<li><code>ax6s-full.bin</code>为OpenWrt高大全版</li>
+<li><code>ax6s-mini.bin</code>为OpenWrt精简版</li>
+</ul>
+<h3 id="使用telnet登录路由器"><a href="#使用telnet登录路由器" class="headerlink" title="使用telnet登录路由器"></a>使用telnet登录路由器</h3><p>ip填路由器ip，用户名<code>root</code></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-bdaa70-image-20230529165650804.png" alt="image-20230529165650804"></p>
+<p>进入</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-629691-image-20230529165757774.png" alt="image-20230529165757774"></p>
+<p>输入<code>root</code>，回车</p>
+<p>密码输入刚刚算出来的<code>4a10224d</code>，回车</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-9e6d5c-image-20230529165917791.png" alt="image-20230529165917791"></p>
+<h3 id="输入命令获取SSH权限"><a href="#输入命令获取SSH权限" class="headerlink" title="输入命令获取SSH权限"></a>输入命令获取SSH权限</h3><ul>
+<li><p><code>nvram set ssh_en=1&amp; nvram set uart_en=1 &amp; nvram set boot_wait=on &amp; nvram setbootdelay=3 &amp; nvram set flag_try_sys1_failed=0 &amp; nvram setflag_try_sys2_failed=1 </code></p>
+</li>
+<li><p><code>nvram setflag_boot_rootfs=0 &amp; nvram set &quot;boot_fw1=run boot_rd_img;bootm&quot; </code></p>
+</li>
+<li><p><code>nvram setflag_boot_success=1 &amp; nvram commit &amp; /etc/init.d/dropbear enable &amp;/etc/init.d/dropbear start</code></p>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-5eac0c-image-20230529170132469.png" alt="image-20230529170132469"></p>
+<h3 id="SSH登录"><a href="#SSH登录" class="headerlink" title="SSH登录"></a>SSH登录</h3><p>输入<code>ssh root@192.168.31.1</code>，输入yes保存指纹</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-565199-image-20230529170323658.png" alt="image-20230529170323658"></p>
+<p>密码使用之前计算出来的密码：<code>4a10224d</code></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-e7b1ad-image-20230529170455573.png" alt="image-20230529170455573"></p>
+<h3 id="上传底包"><a href="#上传底包" class="headerlink" title="上传底包"></a>上传底包</h3><p>在底包所在文件夹shift加右键</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-32168a-image-20230529170658186.png" alt="image-20230529170658186"></p>
+<p>在此处打开<code>powershell</code></p>
+<p>输入：<code>scp .\factory.bin root@192.168.31.1:/tmp/factory.bin</code></p>
+<p>输入密码</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-3deb65-image-20230529170821046.png" alt="image-20230529170821046"></p>
+<h3 id="开刷-1"><a href="#开刷-1" class="headerlink" title="开刷"></a>开刷</h3><p>回到SSH登录好路由器的地方</p>
+<p><code>ls /tmp/factory.bin</code></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-813024-2023-05-29-27ffd4-image-20230529171041408.png" alt="image-20230529171041408"></p>
+<p>没有返回<code>no such file or directory</code>说明上传成功</p>
+<p>输入：<code>mtd -r write /tmp/factory.bin firmware</code></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-ce55a9-image-20230529171139027.png" alt="image-20230529171139027"></p>
+<p>等待路由器亮蓝灯，搜索wifi，如果出现两个<code>Openwrt</code>的wifi，则成功。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-4b0e16-image-20230529171245939.png" alt="image-20230529171245939"></p>
+<h2 id="Step4：开刷Openwrt"><a href="#Step4：开刷Openwrt" class="headerlink" title="Step4：开刷Openwrt"></a>Step4：开刷Openwrt</h2><h3 id="准备-3"><a href="#准备-3" class="headerlink" title="准备"></a>准备</h3><p>连上<code>Openwrt</code>的wifi或者网线查lan口连上电脑</p>
+<p>查看wifi连接属性</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-28c768-image-20230529171703633.png" alt="image-20230529171703633"></p>
+<p>看到网段为<code>192.168.6.x</code>，路由器地址为<code>192.168.6.1</code></p>
+<h3 id="进入后台刷固件"><a href="#进入后台刷固件" class="headerlink" title="进入后台刷固件"></a>进入后台刷固件</h3><p>在浏览器输入路由器地址，进入</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-5904f3-2023-05-29-cc4308-image-20230529171834792.png" alt="image-20230529171834792"></p>
+<p>用户名<code>root</code>，密码默认<code>password</code></p>
+<p>左边菜单选系统，备份&#x2F;升级</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-eedcc8-image-20230529171950134.png" alt="image-20230529171950134"></p>
+<p>刷写新固件，选择<code>ax6s-full.bin</code></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-259db3-image-20230529172045362.png" alt="image-20230529172045362"></p>
+<p>点击刷写固件，跳出来的界面点处理</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-4c31c6-image-20230529172141412.png" alt="image-20230529172141412"></p>
+<p>继续等待路由器指示灯变蓝</p>
+<h2 id="mentohust认证"><a href="#mentohust认证" class="headerlink" title="mentohust认证"></a>mentohust认证</h2><p>刷入后有0.3.1的 <code>mentohust</code>，惊喜</p>
+<p>不需要从<code>ipk</code>包开始刷了，登录后台填好了就用</p>
+<p><code>NEUQ</code>的校园网只能用旧版本的，新版本用不了（踩过坑QAQ。这个固件自带版本正好和上次成功的版本一样。</p>
+<p>先进入接口，找到网卡</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-9dfd84-image-20230529175044458.png" alt="image-20230529175044458"></p>
+<p>这里wan口用的<code>eth0.2</code></p>
+<h3 id="mentohust设置"><a href="#mentohust设置" class="headerlink" title="mentohust设置"></a>mentohust设置</h3><p>进入服务-<code>MenToHUST</code></p>
+<p>先设置高级设置</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-74f835-image-20230529175247909.png" alt="image-20230529175247909"></p>
+<p>ip地址填办公室的网口ip段中的任意一个</p>
+<p>子网掩码改为<code>255.255.255.0</code>，网关对应着改一下</p>
+<p>DNS服务器填公共DNS服务器比如<code>8.8.8.8</code></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-bc1264-image-20230529175510023.png" alt="image-20230529175510023"></p>
+<p>组播地址选锐捷，<code>DHCP</code>选未配置</p>
+<p>保存&amp;应用</p>
+<p>然后回到常规设置</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/niimi_sora/pic-upload/raw/master/pics/2023-05-29-0d5799-image-20230529175607485.png" alt="image-20230529175607485"></p>
+<p>勾选启用，用户名密码填校园网的</p>
+<p>接口选择上面查到的<code>eth0.2</code></p>
+<p>ping主机设置为<code>114.114.114.114</code></p>
+<p>保存&amp;应用</p>
+<p>过一会儿就有网络了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://www.neuq.club">EKeepers</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.neuq.club/2023/05/29/introduce/openwrt/">https://www.neuq.club/2023/05/29/introduce/openwrt/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></div><div class="post_share"><div class="social-share" data-image="/img/shadow.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/31/introduce/vpn2/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" onerror="onerror=null;src='/img/train.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">魔法上网你应该知道的（二）</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/29/training/blog-build/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" onerror="onerror=null;src='/img/train.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">如何快速搭建一个像这样的博客（一）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/05/31/introduce/vpn2/" title="魔法上网你应该知道的（二）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-31</div><div class="title">魔法上网你应该知道的（二）</div></div></a></div><div><a href="/2023/05/28/introduce/warp/" title="校园网好贵啊，能省省吗~"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-28</div><div class="title">校园网好贵啊，能省省吗~</div></div></a></div><div><a href="/2022/09/17/introduce/vpn/" title="魔法上网你应该知道的（一）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-17</div><div class="title">魔法上网你应该知道的（一）</div></div></a></div><div><a href="/2022/08/08/introduce/dns-pollution/" title="如果你不能正常访问本站"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-08</div><div class="title">如果你不能正常访问本站</div></div></a></div><div><a href="/2022/01/01/introduce/network-failed/" title="假如你断网了"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-01</div><div class="title">假如你断网了</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/train.gif'" alt="avatar"/></div><div class="author-info__name">EKeepers</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">希望你能从本站获取便利。若对本站有任何问题或建议请联系邮箱 neuqekeeper@163.com，我们会定期查看并回复，欢迎来信！个人电脑问题请联系E管家QQ 2985586863</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AX6S%E5%88%B7%E5%85%A5openwrt%E5%90%AF%E7%94%A8mentohust%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">AX6S刷入openwrt启用mentohust记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81mentohust"><span class="toc-number">1.2.</span> <span class="toc-text">为什么要mentohust</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%9E%8B%E5%8F%B7"><span class="toc-number">1.3.</span> <span class="toc-text">路由器型号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1%EF%BC%9A-%E6%8D%A2%E5%BC%80%E5%8F%91%E7%89%88"><span class="toc-number">1.4.</span> <span class="toc-text">Step 1： 换开发版</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.4.1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%88%B7"><span class="toc-number">1.4.2.</span> <span class="toc-text">开刷</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step2%EF%BC%9A%E8%8E%B7%E5%8F%96SSH%E5%AF%86%E7%A0%81"><span class="toc-number">1.5.</span> <span class="toc-text">Step2：获取SSH密码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%95%B4"><span class="toc-number">1.5.2.</span> <span class="toc-text">开整</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step3%EF%BC%9A%E5%88%B7%E5%85%A5%E5%BA%95%E5%8C%85"><span class="toc-number">1.6.</span> <span class="toc-text">Step3：刷入底包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87-2"><span class="toc-number">1.6.1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8telnet%E7%99%BB%E5%BD%95%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="toc-number">1.6.2.</span> <span class="toc-text">使用telnet登录路由器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%91%BD%E4%BB%A4%E8%8E%B7%E5%8F%96SSH%E6%9D%83%E9%99%90"><span class="toc-number">1.6.3.</span> <span class="toc-text">输入命令获取SSH权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH%E7%99%BB%E5%BD%95"><span class="toc-number">1.6.4.</span> <span class="toc-text">SSH登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%BA%95%E5%8C%85"><span class="toc-number">1.6.5.</span> <span class="toc-text">上传底包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%88%B7-1"><span class="toc-number">1.6.6.</span> <span class="toc-text">开刷</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step4%EF%BC%9A%E5%BC%80%E5%88%B7Openwrt"><span class="toc-number">1.7.</span> <span class="toc-text">Step4：开刷Openwrt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87-3"><span class="toc-number">1.7.1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%B0%E5%88%B7%E5%9B%BA%E4%BB%B6"><span class="toc-number">1.7.2.</span> <span class="toc-text">进入后台刷固件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mentohust%E8%AE%A4%E8%AF%81"><span class="toc-number">1.8.</span> <span class="toc-text">mentohust认证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mentohust%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.8.1.</span> <span class="toc-text">mentohust设置</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2024 By EKeepers</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">这趟旅程若算开心，亦是无负这一生</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

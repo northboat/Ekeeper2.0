@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>如何安装 Linux | EKeeper House</title><meta name="keywords" content="系统"><meta name="author" content="EKeepers"><meta name="copyright" content="EKeepers"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="是Linux!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何安装 Linux">
+<meta property="og:url" content="https://www.neuq.club/2022/01/07/training/linux-install/index.html">
+<meta property="og:site_name" content="EKeeper House">
+<meta property="og:description" content="是Linux!">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.neuq.club/img/shadow.jpg">
+<meta property="article:published_time" content="2022-01-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-08-27T14:17:25.399Z">
+<meta property="article:author" content="EKeepers">
+<meta property="article:tag" content="系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.neuq.club/img/shadow.jpg"><link rel="shortcut icon" href="/img/logo.ico"><link rel="canonical" href="https://www.neuq.club/2022/01/07/training/linux-install/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '如何安装 Linux',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-27 22:17:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/logo.jpg" onerror="onerror=null;src='/img/train.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 资源链接</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/thank/"><i class="fa-fw fas fa-handshake"></i><span> 特别感谢</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/shadow.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">EKeeper House</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 资源链接</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/thank/"><i class="fa-fw fas fa-handshake"></i><span> 特别感谢</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">如何安装 Linux</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-01-06T16:00:00.000Z" title="Created 2022-01-07 00:00:00">2022-01-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-08-27T14:17:25.399Z" title="Updated 2024-08-27 22:17:25">2024-08-27</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>参考教程：<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/masbay/p/10745170.html">windows10安装ubuntu双系统教程(cnblogs.com)</a></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h3><p>镜像百度搜索即可，以ubuntu为例</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://ubuntu.com/download">官方下载地址</a>（较慢，不推荐）</li>
+<li><a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/ubuntu-releases/">中科大</a></li>
+<li><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu-releases/">阿里云</a></li>
+</ol>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>获取镜像后，通过一些软件如UltralISO将镜像写入U盘，注意这一步操作将格式化你的U盘，U盘大小最好<code>&gt;=8GB</code></p>
+<ul>
+<li>和制作<code>PE</code>盘是一个道理</li>
+</ul>
+<p>使用<code>Rufus</code></p>
+<p>特点：Rufus 麻雀虽小，五脏俱全，体积虽小，功能全面，提供了一切你所需要的功能。Rufus 还 非常快（只支持win系统）</p>
+<p><a target="_blank" rel="noopener" href="https://rufus.ie/zh/">Rufus - 轻松创建USB启动盘</a></p>
+<p>使用<code>ventoy</code></p>
+<p>特点：简单来说，Ventoy是一个制作可启动U盘的开源工具。有了Ventoy你就无需反复地格式化U盘，你只需要把 ISO&#x2F;WIM&#x2F;IMG&#x2F;VHD(x)&#x2F;EFI 等类型的文件直接拷贝到U盘里面就可以启动了，无需其他操作(跨平台支持)</p>
+<p><a target="_blank" rel="noopener" href="https://www.ventoy.net/cn/">Ventoy - 新一代多系统启动U盘解决方案</a></p>
+<h3 id="查看BIOS类型"><a href="#查看BIOS类型" class="headerlink" title="查看BIOS类型"></a>查看BIOS类型</h3><p><code>win+r</code>快捷键进入”运行”，输入<code>msinfo32</code>回车，在弹出界面中，可查看BIOS模式</p>
+<p>分为<code>UEFI</code>模式和<code>传统</code>MBR模式</p>
+<p>现在的电脑绝大部分都是<code>UEFI</code>，以防万一看一眼</p>
+<p>记住电脑的BIOS模式，在分区时需要用到</p>
+<h3 id="为Linux腾出空间"><a href="#为Linux腾出空间" class="headerlink" title="为Linux腾出空间"></a>为<code>Linux</code>腾出空间</h3><p>在原有的win系统中，用磁盘管理压缩出一片空闲空间，如装双系统，推荐大小为70-100GB，注意数据备份</p>
+<p>这一步用<code>DiskGenius</code>等分区工具都是可以的，以下链接作为参考</p>
+<p><a target="_blank" rel="noopener" href="https://iknow.lenovo.com.cn/detail/dc_133316.html">Windows 10系统下如何进行压缩卷和扩展卷-联想知识库</a></p>
+<p>注意令扇区处于未分配的状态即可</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="进入u盘系统"><a href="#进入u盘系统" class="headerlink" title="进入u盘系统"></a>进入u盘系统</h3><p>这一步与进pe的方式完全相同，根据不同主板类型在开机阶段猛摁<code>f2或f10</code>等键进入BIOS，更改启动项</p>
+<p>如何更改启动项</p>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/215817f73456665edb142319.html">作为参考的百度经验</a></p>
+<p>不同主板的bios不尽相同，但只要抓住关键字<code>boot、priority</code>，一般在这一步不会出现什么问题</p>
+<p>在更改启动项后，会出现以下两个选项（不止俩）</p>
+<ol>
+<li>try Ubuntu without install</li>
+<li>install Ubuntu</li>
+</ol>
+<p>若想体验一下乌班图再安装请选择<code>1</code>，若直接安装请选择<code>2</code></p>
+<h3 id="设置语言、wifi、安装方式"><a href="#设置语言、wifi、安装方式" class="headerlink" title="设置语言、wifi、安装方式"></a>设置语言、wifi、安装方式</h3><h4 id="选择语言"><a href="#选择语言" class="headerlink" title="选择语言"></a>选择语言</h4><p>一般为<code>中文(简体)</code>，也可选择<code>English</code></p>
+<h4 id="检查联网"><a href="#检查联网" class="headerlink" title="检查联网"></a>检查联网</h4><p>跳过wifi选项</p>
+<p>会有一个安装中下载更新的选项，这一步选否（不勾选），勾选会造成安装很慢</p>
+<h4 id="选择安装方式"><a href="#选择安装方式" class="headerlink" title="选择安装方式"></a>选择安装方式</h4><p>选择<code>其他选项</code>，若是英文界面，应该是<code>something else</code>（英文界面只会出现在第一步你勾选了<code>English</code>之后）</p>
+<h3 id="系统分区"><a href="#系统分区" class="headerlink" title="系统分区"></a>系统分区</h3><p>这一步着重讲解</p>
+<p>选中空闲分区，在分区后有提示分区大小，以MB为单位，注意找到你分出的区域</p>
+<p>点击+号对<code>ubuntu</code>进行分区，假设<code>linux</code>一共占空间<code>80G</code></p>
+<p>手动分盘法：</p>
+<ol>
+<li>启动分区将根据<code>Bios</code>模式进行区分<ul>
+<li>若为<code>UEFI</code>模式，勾选logical（逻辑分区），挂载目录选择<code>efi</code>，大小为<code>300MB</code>左右，文件格式为<code>efi</code></li>
+<li>若为<code>传统</code>模式，勾选logical（逻辑分区），挂载目录选择<code>boot</code>，大小也为<code>300MB</code>左右，文件格式为<code>ext4</code></li>
+</ul>
+</li>
+<li>勾选<code>logical</code>，文件格式选项选择<code>swap area</code>，为内存大小，以电脑为准，一般设置为电脑内存条的两倍</li>
+<li>勾选<code>primary</code>，挂载目录选择<code>/</code>，该分区类似于win的c盘，<code>20-30GB</code>，文件格式为<code>ext4</code></li>
+<li>勾选<code>primary</code>，挂载目录选择<code>/home</code>，文件格式为<code>ext4</code>，你的所有软件将下在该目录，相当于win系统中的其他盘，剩下的空间全给该分区</li>
+</ol>
+<p>特点：操作繁琐，但是能根据自己的需求分区，同时能够自定义文件系统</p>
+<p>自动分盘法：</p>
+<p>在磁盘中留下空白卷（指无文件系统无分区），然后安装的时候选择这部分区域直接覆盖安装即可</p>
+<p>特点：傻瓜化处理，避免分区的错误；相对的，swap分区等不一定会划出来，对于linux的睡眠等功能有所影响，同时文件系统不能自定义</p>
+<p>然后点击继续，设置时区、键盘布局、用户名、密码，开始安装系统，等待，重启</p>
+<p>至此完成了本次安装</p>
+<p>两个注意：</p>
+<ul>
+<li>若在分区时启动分区设置错误，在安装完毕后，<code>Bios</code>将读不到乌班图的启动项，只能重新删除卷重新进行安装，即重新执行第二大步</li>
+<li>若想将ubuntu装进移动固态硬盘中，启动分区选择<code>efi</code></li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>众所周知，<code>Linux</code>对一些硬件的支持并不好，驱动或许会成为你新装的<code>linux</code>的首要问题</p>
+<p>一般来说都有兼容性驱动，如果不幸地发现自己的wifi（不用担心有线上网）不能使用，建议先使用</p>
+<p><code>lspci -k | grep Network</code></p>
+<p>查看是否加载无线，</p>
+<p>比如<code>00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 (rev 20)</code></p>
+<p>如果加载成功，可以尝试使用iwctl或者netmanager程序进行检查。具体可以查阅arch wiki获得相关信息（也可以咨询E管家）</p>
+<p>常见丢失的驱动有：网卡驱动、触摸板驱动以及显卡驱动</p>
+<h2 id="E管家的一些补充"><a href="#E管家的一些补充" class="headerlink" title="E管家的一些补充"></a>E管家的一些补充</h2><p>附上 arch 简明指南，按照这个装一遍差不多啥都会了</p>
+<p><a target="_blank" rel="noopener" href="https://arch.icekylin.online/">https://arch.icekylin.online/</a></p>
+<p>再补充一下，Linux对于N卡驱动的支持并不友好（f**k nvidia），debian,ubuntu这种安装一般装N卡驱动的都是开源驱动（不能完全释放性能）。如果对显卡有执着心理的同学，建议在直接在装机这一步解决了（<code>Manjaro</code>提供了开源和闭源（也就是老黄给的）驱动的安装选择），否则安装好之后折腾是非常痛苦的（亲身体验）</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://www.neuq.club">EKeepers</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.neuq.club/2022/01/07/training/linux-install/">https://www.neuq.club/2022/01/07/training/linux-install/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%B3%BB%E7%BB%9F/">系统</a></div><div class="post_share"><div class="social-share" data-image="/img/shadow.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/01/16/training/office-install/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" onerror="onerror=null;src='/img/train.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">如何安装 Office</div></div></a></div><div class="next-post pull-right"><a href="/2022/01/04/training/win-install/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" onerror="onerror=null;src='/img/train.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">使用PE盘重装 Windows</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/08/27/introduce/win-repair/" title="从入门到入坟的windows错误修复"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-27</div><div class="title">从入门到入坟的windows错误修复</div></div></a></div><div><a href="/2022/01/04/training/win-install/" title="使用PE盘重装 Windows"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/shadow.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-04</div><div class="title">使用PE盘重装 Windows</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/train.gif'" alt="avatar"/></div><div class="author-info__name">EKeepers</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">希望你能从本站获取便利。若对本站有任何问题或建议请联系邮箱 neuqekeeper@163.com，我们会定期查看并回复，欢迎来信！个人电脑问题请联系E管家QQ 2985586863</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="toc-number">1.1.</span> <span class="toc-text">下载镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98"><span class="toc-number">1.2.</span> <span class="toc-text">制作启动盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BBIOS%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">查看BIOS类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BALinux%E8%85%BE%E5%87%BA%E7%A9%BA%E9%97%B4"><span class="toc-number">1.4.</span> <span class="toc-text">为Linux腾出空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5u%E7%9B%98%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.1.</span> <span class="toc-text">进入u盘系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80%E3%80%81wifi%E3%80%81%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">设置语言、wifi、安装方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%80"><span class="toc-number">2.2.1.</span> <span class="toc-text">选择语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E8%81%94%E7%BD%91"><span class="toc-number">2.2.2.</span> <span class="toc-text">检查联网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="toc-number">2.2.3.</span> <span class="toc-text">选择安装方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA"><span class="toc-number">2.3.</span> <span class="toc-text">系统分区</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">3.</span> <span class="toc-text">其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E%E7%AE%A1%E5%AE%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85"><span class="toc-number">4.</span> <span class="toc-text">E管家的一些补充</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2024 By EKeepers</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">这趟旅程若算开心，亦是无负这一生</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
